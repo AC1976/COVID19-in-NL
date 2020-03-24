@@ -10,7 +10,7 @@ cities = mar17['City'].to_list()
 ## geocode function to output a list of places with lat, lon combos into cities.xlsx
 
 def geocode_address(cities):
-    gmaps = googlemaps.Client(key='AIzaSyA8rdGWADDPbQt1hxpSwjxILcCdEOikwxs')
+    gmaps = googlemaps.Client(key='GOOGLE_API_KEY_GOES_HERE')
     virus = pd.DataFrame(columns=['City', 'Lat', 'Lon'])
     for city in cities:    
         geocode_result = gmaps.geocode(city, region='nl')
